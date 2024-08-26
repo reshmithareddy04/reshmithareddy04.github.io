@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Reshmitha Reddy - Web Designer and IoT Developer from Hyderabad, passionate about cybersecurity and tech innovation.">
+    <meta name="keywords" content="Reshmitha Reddy, Web Designer, IoT Developer, Cybersecurity, Hyderabad">
+    <meta name="author" content="Reshmitha Reddy">
+    <title>Reshmitha Reddy</title>
+    <script src="https://kit.fontawesome.com/8a0b8716be.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        /* General header styles */
+        h1, h2, h3 {
+            font-family: Arial, sans-serif; /* Choose a clean font */
+            color: #fefefe; /* Adjust the color if needed */
+        }
+        
+        /* Specific sizes for different header tags */
+        h1 {
+            font-size: 1.15em; /* Adjust as needed */
+        }
+        
+        h2 {
+            font-size: 1em; /* Adjust as needed */
+        }
+        
+        h3 {
+            font-size: 0.75em; /* Adjust as needed */
+        }
+        
+        /* Optional: Adjust margin and padding for headers */
+        h1, h2, h3 {
+            margin: 0.5em 0; /* Adjust spacing around headers */
+            padding: 0; /* Adjust padding if needed */
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
+        }
+        
+        /* Header Section */
+        #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url('portfolio/pics/bgg.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .header-text p, 
+        .header-text h1 {
+            color: #d88ff1; /* Purple color for text */
+        }
+        
+        .header-text span {
+            color: #E5F4E3; /* Purple color for the name 'Reshmitha' */
+        }
+        
+        .Container {
+            padding: 10px 10%;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            width: 140px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 10px 20px;
+        }
+        
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #d88ff1;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: width 0.5s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Header Text */
+        .header-text {
+            margin-top: 20%;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .header-text h1 {
+            margin-top: 20px;
+            font-size: 50px;
+        }
+        
+        /* About Section */
+        #About {
+            padding: 80px 0;
+            color: #ababab;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .About-col-1 {
+            flex-basis: 35%;
+        }
+        
+        .About-col-1 img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        .About-col-2 {
+            flex-basis: 60%;
+        }
+        
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+        
+        /* Tab Titles */
+        .tab-titles {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+        
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #d88ff1;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: width 0.5s ease;
+        }
+        
+        .tab-links.active-link::after {
+            width: 50%;
+        }
+        
+        /* Tab Contents */
+        .tab-contents ul li {
+            list-style: none;
+            margin: 10px 0;
+        }
+        
+        .tab-contents ul li span {
+            color: #d88ff1;
+            font-size: 14px;
+        }
+        
+        .tab-contents {
+            display: none;
+        }
+        
+        .tab-contents.active-tab {
+            display: block;
+        }
+        
+        /* Services Section */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .services-list div {
+            background-color: #262626;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 300;
+            border-radius: 10px;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+        }
+        
+        .services-list div i {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        
+        .services-list div h2 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .services-list div a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 12px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        .services-list div:hover {
+            background-color: #d88ff1;
+            transform: translateY(-10px);
+        }
+        
+        /* Portfolio Section */
+        #portfolio .projects-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .project {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+            margin: 10px;
+        }
+        
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #d88ff1);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            transition: height 0.5s ease;
+        }
+        
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .layer a {
+            margin-top: 20px;
+            color: #d88ff1;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 60px;
+            background-color: #FFFFFF;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        
+        .project:hover img {
+            transform: scale(1.1);
+        }
+        
+        .project:hover .layer {
+            height: 100%;
+        }
+        
+        /* Portfolio Section Padding */
+        #portfolio {
+            padding: 40px 0;
+        }
+        
+        .btn {
+            display: block;
+            margin: 50px auto;
+            width: fit-content;
+            border: 1px solid #d88ff1;
+            padding: 14px 50px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #d88ff1;
+        }
+        
+        /* Hobbies Section */
+        #hobbies {
+            padding: 80px 0;
+            background-color: #000000; /* Background color */
+        }
+        
+        .hobbies-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hobby {
+            border-radius: 10px;
+            background-color: #262626;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 300;
+            text-align: center;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+            flex: 1;
+            margin: 10px;
+        }
+        
+        .hobby i {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .hobby h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .hobby p {
+            font-size: 14px;
+            color: #ababab;
+        }
+        
+        #span {
+            color: #61b752;
+            margin-top: -40px;
+            display: block;
+        }
+        
+        .hobby:hover {
+            background-color: #d88ff1;
+            transform: translateY(-10px);
+        }
+        
+        /* Responsive Adjustments */
+        @media only screen and (max-width: 800px) {
+            .hobbies-list {
+                flex-direction: column;
+            }
+        }
+        
+        /* Contact Section */
+        .contact-left {
+            flex-basis: 35%;
+        }
+        
+        .contact-right {
+            flex-basis: 60%;
+        }
+        
+        .contact-left p {
+            margin-top: 30px;
+        }
+        
+        .contact-left p i {
+            color: #d88ff1;
+            margin-right: 15px;
+            font-size: 25px;
+        }
+        
+        .social-icons {
+            margin-top: 30px;
+        }
+        
+        .social-icons a {
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 15px;
+            color: #ababab;
+            display: inline-block;
+            transition: transform 0.5s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d88ff1;
+            transform: translateY(-5px);
+        }
+        
+        .btn.btn2 {
+            display: inline-block;
+            background-color: #d88ff1;
+            padding: 14px 50px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            color: #FFFFFF;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .contact-right form {
+            width: 100%;
+        }
+        
+        form input,
+        form textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: #262626;
+            padding: 15px;
+            margin: 15px 0;
+            color: #FFFFFF;
+            font-size: 18px;
+            border-radius: 6px;
+        }
+        
+        form button {
+            background-color: #d88ff1;
+            border: none;
+            outline: none;
+            color: #FFFFFF;
+            padding: 10px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.5s ease;
+        }
+        
+        form button:hover {
+            background-color:#d88ff1;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    
+    <body>
+        <header id="header">
+            <div class="Container">
+                <nav>
+                    <img src="portfolio/pics/Screenshot_2024-08-25_143531-removebg-preview.png" class="logo" alt="Reshmitha Reddy Logo">
+                    <ul id="side menu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <div class="left-align">
+                        <p>Web Designer</p>
+                    </div>
+                    <h1>Hello, I'm <span>Reshmitha</span><br>An Undergraduate</h1>
+                </div>
+            </div>
+        </header>
+    
+        <!-- About Section -->
+        <section id="About">
+            <div class="Container">
+                <div class="row">
+                    <div class="About-col-1">
+                       <img src="portfolio/pics/mine.jpg" alt="reshmitha photo"class="about-img">
+                    </div>
+                    <div class="About-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am an undergraduate IoT engineer passionate about cybersecurity and Android development. With hands-on experience in web design and IoT projects, I am driven to create innovative tech solutions that address real-world challenges. I am eager to further develop my skills and contribute to impactful projects in the tech industry.</p>
+    
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills', event)">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience', event)">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education', event)">Education</p>
+                            <p class="tab-links" onclick="opentab('Roles', event)">Roles in College</p>
+                        </div>
+    
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>IoT Tools & Sensors</span><br>Sensors,Embedded System such as Ardunio</li>
+                                <li><span>Cybersecurity</span><br>HTTP &HTTPS, Wireshark,Linux</li>
+                                <li><span>App & Web Development</span><br>Html & Css , javascript , Android Studio</li>
+                            </ul>
+                        </div>
+    
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>2024</span><br>Junior Technical Engineer at Moxie Hawk</li>
+                            </ul>
+                        </div>
+    
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2021-2025  CGpa:8.13</span><br>IoT undergraduate at HITAM</li>
+                                <li><span>2019-2021  CGpa:9.36</span><br>Intermediate at Abhyas Junior College</li>
+                                <li><span>2018-2019  CGpa:9.8</span><br>Matriculation at St. Anthony's High School</li>
+                            </ul>
+                        </div>
+    
+                        <div class="tab-contents" id="Roles">
+                            <ul>
+                                <li><span>PR & Social Media Head </span><br>Social Media Head IUCEE-EWB HITAM Student Chapter</li>
+                                <li><span>Vlounteer</span><br>For a Cause</li>
+                                <li><span>Public Relations and Manager</span><br>IHSB Organization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+       <!-- Services Section -->
+<section id="services">
+    <div class="Container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div class="service-item">
+                <i class="fas fa-laptop-code"></i> <!-- Updated icon for Web Design -->
+                <h2>Web Design</h2>
+                <p>Craft stunning, responsive websites using HTML, CSS, and JavaScript for seamless, dynamic experiences.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-microchip"></i> <!-- Updated icon for IoT Services -->
+                <h2>IoT Services</h2>
+                <p>Developing innovative IoT solutions with smart sensors and connectivity for efficient, data-driven applications.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+        <!-- Portfolio Section -->
+<section id="portfolio">
+    <div class="Container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src="portfolio/pics/789.jpg" alt="Smart Dustbin Project">
+                <div class="layer">
+                    <h3>FloodShield</h3>
+                    <p>FloodShield is a helpline platform dedicated to ensuring public safety by addressing drainage and manhole issues. Report hazards, contribute through donations, or volunteer to make a difference.</p>
+                    <a href="https://venkat01221.wixsite.com/road-drainage-system"> <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="portfolio/pics/123.jpg" alt="Fashion MNIST Project">
+                <div class="layer">
+                    <h3>Fashion MNIST</h3>
+                    <p>Fashion MNIST is a deep learning project that classifies fashion apparel into ten categories using a CNN model to enhance image recognition accuracy and advance AI-based fashion analysis.</p>
+                    <a href="https://github.com/reshmithareddy04/Fashion_MNIST_classification.git"> <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="portfolio/pics/456.jpg" alt="GrabGrowConnect App">
+                <div class="layer">
+                    <h3>GrabGrowConnect</h3>
+                    <p>GrabGrowConnect empowers farmers by analyzing their current situation and providing tailored crop suggestions. It also connects them directly with consumers and retailers, ensuring fair prices and eliminating intermediaries. This platform promotes transparency, reduces costs, and supports local agriculture for a more sustainable and equitable market ecosystem.</p>
+                    <a href="#"> <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+</section>
+
+    
+       <!-- Hobbies Section -->
+<section id="hobbies">
+    <div class="Container">
+        <h2 class="sub-title">My Hobbies</h2>
+        <div class="hobbies-list">
+            <div class="hobby">
+                <i class="fas fa-paint-brush"></i> <!-- Icon for Painting -->
+                <h2>Painting</h2>
+                <p>Enjoy expressing creativity through various painting techniques and styles.</p>
+            </div>
+            <div class="hobby">
+                <i class="fas fa-music"></i> <!-- Icon for Music -->
+                <h2>Poetry</h2>
+                <p>Passionate about listening to and creating music across different genres.</p>
+            </div>
+            <div class="hobby">
+                <i class="fas fa-book"></i> <!-- Icon for Reading -->
+                <h2>Reading</h2>
+                <p>Dedicated to exploring various literary genres and expanding knowledge through books.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+        <!-- Contact Section -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>reshmithareddychaikam@gmail.com</p>
+                        <p><i class="fas fa-phone"></i>+91-7075581970</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/chaikam-reshmitha-reddy-75b486263/?originalSubdomain=in"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/reshmithareddy04"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/reshmitha_0406/?hl=en"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/home"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <a href="C:\Users\reshm\OneDrive\Documents\Desktop\Resumes\Reshmitha_6911.pdf" class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Send Message</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer Section -->
+        <footer>
+            <div class="copyright">
+                <p>copyright @reshmithareddychaikam made with <i class="fas fa-heart"></i></p>
+                   
+               </div>
+           
+        </footer>
+        </section>
+    
+        
+
+        <script>
+            var tabLinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+    
+            function opentab(tabName, event) {
+                for (tabLink of tabLinks) {
+                    tabLink.classList.remove("active-link");
+                }
+                for (tabContent of tabContents) {
+                    tabContent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabName).classList.add("active-tab");
+            }
+    
+            function openmenu() {
+                document.getElementById("side-menu").style.right = "0";
+            }
+    
+            function closemenu() {
+                document.getElementById("side-menu").style.right = "-200px";
+            }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzZcD9nRM7BhXcRRXMSzcdN-GHJpzEtUCQiTKh2TgwMo_pvDJkHAqr6wu7kwVz_rDXH/exec';
+            const form = document.forms['submit-to-google-sheet'];
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault();
+              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {msg.innerHTML=" message sent successfully..!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            }
+            ,5000)
+            form.reset()
+        })
+                .catch(error => console.error('Error!', error.message));
+            });
+          </script>
+          <script>
+            function opentab(tabName, event) {
+                var i, tabcontents, tablinks;
+                tabcontents = document.getElementsByClassName("tab-contents");
+                for (i = 0; i < tabcontents.length; i++) {
+                    tabcontents[i].style.display = "none";  
+                }
+                tablinks = document.getElementsByClassName("tab-links");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active-link", "");
+                }
+                document.getElementById(tabName).style.display = "block";  
+                event.currentTarget.className += " active-link";
+            }
+            
+            function openmenu() {
+                document.getElementById("side menu").style.width = "250px";
+            }
+            
+            function closemenu() {
+                document.getElementById("side menu").style.width = "0";
+            }
+        </script>
+        
+          
+    </body>
+    </html>
+    
