@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Reshmitha Reddy - Web Designer and IoT Developer from Hyderabad, passionate about cybersecurity and tech innovation.">
+    <meta name="keywords" content="Reshmitha Reddy, Web Designer, IoT Developer, Cybersecurity, Hyderabad">
+    <meta name="author" content="Reshmitha Reddy">
+    <title>Reshmitha Reddy</title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="https://kit.fontawesome.com/8a0b8716be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="Container">
+            <nav>
+                <img src="pics/Screenshot_2024-08-25_143531-removebg-preview.png" class="logo" alt="Reshmitha Reddy Logo">
+                <ul id="side menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <div class="left-align">
+                    <p>Web Designer</p>
+                </div>
+                <h1>Hello, I'm <span>Reshmitha</span><br>An Undergraduate</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="About">
+        <div class="Container">
+            <div class="row">
+                <div class="About-col-1">
+                   <img src="pics/mine.jpg" alt="reshmitha photo"class="about-img">
+                </div>
+                <div class="About-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an undergraduate IoT engineer passionate about cybersecurity and Android development. With hands-on experience in web design and IoT projects, I am driven to create innovative tech solutions that address real-world challenges. I am eager to further develop my skills and contribute to impactful projects in the tech industry.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education', event)">Education</p>
+                        <p class="tab-links" onclick="opentab('Roles', event)">Roles in College</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>IoT Tools & Sensors</span><br>Sensors,Embedded System such as Ardunio</li>
+                            <li><span>Cybersecurity</span><br>HTTP &HTTPS, Wireshark,Linux</li>
+                            <li><span>App & Web Development</span><br>Html & Css , javascript , Android Studio</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024</span><br>Junior Technical Engineer at Moxie Hawk</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021-2025  CGpa:8.13</span><br>IoT undergraduate at HITAM</li>
+                            <li><span>2019-2021  CGpa:9.36</span><br>Intermediate at Abhyas Junior College</li>
+                            <li><span>2018-2019  CGpa:9.8</span><br>Matriculation at St. Anthony's High School</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Roles">
+                        <ul>
+                            <li><span>PR & Social Media Head </span><br>Social Media Head IUCEE-EWB HITAM Student Chapter</li>
+                            <li><span>Vlounteer</span><br>For a Cause</li>
+                            <li><span>Public Relations and Manager</span><br>IHSB Organization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="Container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fa-solid fa-wand-magic"></i>
+                    <h2>Web Design</h2>
+                    <p>Crafts stunning, responsive websites using HTML, CSS, and JavaScript for seamless, dynamic experiences.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h2>IoT Services</h2>
+                    <p>Developing innovative IoT solutions with smart sensors and connectivity for efficient, data-driven applications.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="Container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="projects-list">
+                <div class="project">
+                    <img src="pics/789.jpg" alt="Smart Dustbin Project">
+                    <div class="layer">
+                        <h3>FloodShield</h3>
+                        <p>FloodShield is a helpline platform dedicated to ensuring public safety by addressing drainage and manhole issues. Report hazards, contribute through donations, or volunteer to make a difference.</p>
+                        <a href="https://venkat01221.wixsite.com/road-drainage-system"> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="pics/123.jpg" alt="Fashion MNIST Project">
+                    <div class="layer">
+                        <h3>Fashion MNIST</h3>
+                        <p>Fashion MNIST is a deep learning project that classifies fashion apparel into ten categories using a CNN model to enhance image recognition accuracy and advance AI-based fashion analysis.</p>
+                        <a href="https://github.com/reshmithareddy04/Fashion_MNIST_classification.git"> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="pics/456.jpg" alt="GrabGrowConnect App">
+                    <div class="layer">
+                        <h3>GrabGrowConnect</h3>
+                        <p>GrabGrowConnect empowers farmers by analyzing their current situation and providing tailored crop suggestions. It also connects them directly with consumers and retailers, ensuring fair prices and eliminating intermediaries. This platform promotes transparency, reduces costs, and supports local agriculture for a more sustainable and equitable market ecosystem.</p>
+                        <a href="#"> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <div class="Container">
+            <h2 class="sub-title">My Hobbies</h2>
+            <div class="hobbies-list">
+                <div class="hobby">
+                    <i class="fas fa-paint-brush"></i>
+                    <h2>Art Work</h2>
+                    <p>Creating beautiful art through various mediums and techniques.</p>
+                </div>
+                <div class="hobby">
+                    <i class="fas fa-book"></i>
+                    <h2>Reading</h2>
+                    <p>Exploring different genres and expanding my knowledge.</p>
+                </div>
+                <div class="hobby">
+                    <i class="fas fa-pen"></i>
+                    <h2>Poetry</h2>
+                    <p>Writing and appreciating the beauty of poetic expression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>reshmithareddychaikam@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+91-7075581970</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/chaikam-reshmitha-reddy-75b486263/?originalSubdomain=in"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/reshmithareddy04"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/reshmitha_0406/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/home"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <a href="C:\Users\reshm\OneDrive\Documents\Desktop\Resumes\Reshmitha_6911.pdf" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <p>copyright @reshmithareddychaikam made with <i class="fas fa-heart"></i></p>
+               
+           </div>
+       
+    </footer>
+
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName, event) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+
+        function openmenu() {
+            document.getElementById("side-menu").style.right = "0";
+        }
+
+        function closemenu() {
+            document.getElementById("side-menu").style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZcD9nRM7BhXcRRXMSzcdN-GHJpzEtUCQiTKh2TgwMo_pvDJkHAqr6wu7kwVz_rDXH/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {msg.innerHTML=" message sent successfully..!"
+        setTimeout(function(){
+            msg.innerHTML=""
+        }
+        ,5000)
+        form.reset()
+    })
+            .catch(error => console.error('Error!', error.message));
+        });
+      </script>
+      
+</body>
+</html>
